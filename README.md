@@ -69,3 +69,35 @@ image: hyperledger/besu:24.3.3-local
 ```
 
 Then, run `docker-compose up` to start the network with the local image.
+
+
+## Installation
+
+If you are using windows, please use the following snippet and substitute the bottom volumes section of the docker-compose.yml
+```bash
+volumes:
+  validator1-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: C:/Users/Tnesh/Desktop/besu-qbft-docker/data/validator1
+  validator2-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: C:/Users/Tnesh/Desktop/besu-qbft-docker/data/validator2
+  validator3-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: C:/Users/Tnesh/Desktop/besu-qbft-docker/data/validator3
+  validator4-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: C:/Users/Tnesh/Desktop/besu-qbft-docker/data/validator4
+```
